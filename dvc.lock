@@ -1,0 +1,30 @@
+schema: '2.0'
+stages:
+  generate:
+    cmd: python src/generate_data.py
+    deps:
+    - path: src/generate_data.py
+      hash: md5
+      md5: 200380491cefc47d1a3dd0e65b3d2049
+      size: 614
+    outs:
+    - path: data/numbers.csv
+      hash: md5
+      md5: d2eac60903d2028b6250ac936dc61ea0
+      size: 297
+  summarize:
+    cmd: python src/process_data.py
+    deps:
+    - path: data/numbers.csv
+      hash: md5
+      md5: d2eac60903d2028b6250ac936dc61ea0
+      size: 297
+    - path: src/process_data.py
+      hash: md5
+      md5: c87140a3655adc8a664c6d59e127c5a7
+      size: 733
+    outs:
+    - path: output/metrics.json
+      hash: md5
+      md5: 923799411f346d4a670e3248f88bbe8d
+      size: 61
