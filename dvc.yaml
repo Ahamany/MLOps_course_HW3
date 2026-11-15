@@ -1,0 +1,15 @@
+stages:
+  generate:
+    cmd: python src/generate_data.py
+    deps:
+      - src/generate_data.py
+    outs:
+      - data/numbers.csv
+  summarize:
+    cmd: python src/process_data.py
+    deps:
+      - src/process_data.py
+      - data/numbers.csv
+    metrics:
+      - output/metrics.json:
+          cache: false
