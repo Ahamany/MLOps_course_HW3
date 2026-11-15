@@ -1,0 +1,13 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.ruff_cache/
+
+# Локальные материалы
+/примеры/
+
+# DVC
+/.dvc-storage/
+/.dvc/config.local
+/data/*.csv
