@@ -1,0 +1,6 @@
+[project]
+name = "hw3"
+version = "0.1.0"
+description = "MLOps basic: данные и пайплайн с DVC"
+requires-python = ">=3.12"
+dependencies = ["dvc>=3.67.1"]
